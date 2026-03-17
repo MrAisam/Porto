@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul class="links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#myInfo">Info</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HOME -->
+      <div class="sticky-home-wrapper">
+        <section id="home">
+          <video autoplay muted loop class="home-video">
+            <source src="assets/redbg.mp4" type="video/mp4" />
+          </video>
+
+          <div class="home-content">
+            <h1>Aisam Shaikh</h1>
+            <p>BCA Student • Aspiring Web Developer</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="about-container">
+          <div class="about-imgSide">
+            <canvas id="character" width="66" height="65"></canvas>
+          </div>
+
+          <div class="about-infoSide">
+            <h1>About me</h1>
+            <p class="bio"></p>
+            <div class="about-detail">
+              <div class="about-detail-item">
+                <span class="detail-label">Education</span>
+                <span class="detail-value"
+                  >Bachelor of Computer Applications, Year 3</span
+                >
+              </div>
+              <div class="about-detail-item">
+                <span class="detail-label">Experience</span>
+                <span class="detail-value"
+                  >Academic projects in web dev & databases</span
+                >
+              </div>
+              <div class="about-detail-item">
+                <span class="detail-label">Location</span>
+                <span class="detail-value">India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INFO -->
+      <section id="myInfo">
+        <div class="info-container">
+          <div class="info-statement">
+            <h1>A little about me :</h1>
+            <p>
+              infooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+            </p>
+          </div>
+
+          <div class="myinfo-points">
+            <div class="myinfo-point">
+              <span class="point-number">01</span>
+              <div class="point-body">
+                <h3>Strong Foundation</h3>
+                <p>
+                  Three years of BCA has given me solid grounding in programming
+                  fundamentals, databases, and web development.
+                </p>
+              </div>
+            </div>
+
+            <div class="myinfo-point">
+              <span class="point-number">02</span>
+              <div class="point-body">
+                <h3>Fast Learner</h3>
+                <p>
+                  I pick up new tools and technologies quickly and enjoy
+                  figuring out how things work under the hood.
+                </p>
+              </div>
+            </div>
+
+            <div class="myinfo-point">
+              <span class="point-number">03</span>
+              <div class="point-body">
+                <h3>Detail Oriented</h3>
+                <p>
+                  I care about the small things — clean code, good structure,
+                  and interfaces that feel polished.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="projects-wrapper">
+          <div class="projects-header">
+            <h1>Projects</h1>
+            <p>A collection of academic and personal work.</p>
+          </div>
+
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-img"></div>
+              <div class="project-info">
+                <h3>Project One</h3>
+                <p>
+                  Short description of what this project does and what problem
+                  it solves.
+                </p>
+                <div class="project-stack">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-img"></div>
+              <div class="project-info">
+                <h3>Project Two</h3>
+                <p>
+                  Short description of what this project does and what problem
+                  it solves.
+                </p>
+                <div class="project-stack">
+                  <span>PHP</span>
+                  <span>SQL</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-img"></div>
+              <div class="project-info">
+                <h3>Project Three</h3>
+                <p>
+                  Short description of what this project does and what problem
+                  it solves.
+                </p>
+                <div class="project-stack">
+                  <span>REACT</span>
+                  <span>MongoDB</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-img"></div>
+              <div class="project-info">
+                <h3>Project Four</h3>
+                <p>
+                  Short description of what this project does and what problem
+                  it solves.
+                </p>
+                <div class="project-stack">
+                  <span>ANGULAR</span>
+                  <span>MongoDB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <div class="skill-container">
+          <div class="skill-card">
+            <div class="card-in">
+              <div class="card-front">
+                <i class="devicon-html5-plain"></i>
+                <h3>Frontend</h3>
+              </div>
+
+              <div class="card-back">
+                <p class="card-back-heading">-What I can build-</p>
+                <div class="skill-list">
+                  <p>Responsive layouts with HTML & CSS</p>
+                  <p>Interactive UI with JavaScript</p>
+                  <p>Clean, structured web pages</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DATABASE -->
+          <div class="skill-card">
+            <div class="card-in">
+              <div class="card-front">
+                <i class="devicon-mysql-plain"></i>
+                <h3>Databases</h3>
+              </div>
+
+              <div class="card-back">
+                <p class="card-back-heading">-My Experience with-</p>
+                <div class="skill-list">
+                  <p>dbrel1</p>
+                  <p>debrel2</p>
+                  <p>dbrel3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="card-in">
+              <div class="card-front">
+                <i class="devicon-python-plain"></i>
+                <h3>Programming</h3>
+              </div>
+
+              <div class="card-back">
+                <p class="card-back-heading">-Languages i know-</p>
+                <div class="skill-list">
+                  <p>abc</p>
+                  <p>abc</p>
+                  <p>abc</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+
+
+    <footer>
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Aisam Shaikh</h3>
+      <p>BCA Student • Aspiring Web Developer</p>
+    </div>
+
+    <div class="footer-nav">
+      <p class="footer-heading">Navigation</p>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+    </div>
+
+    <div class="footer-contact">
+      <p class="footer-heading">Contact</p>
+      <a href="mailto:aisamshaikh2006@gmail.com">aisamshaikh2006@gmail.com</a>
+      <a href="https://github.com/MrAisam" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/aisam-shaikh-b310523a2" target="_blank">LinkedIn</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Aisam Shaikh. All rights reserved.</p>
+  </div>
+</footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
