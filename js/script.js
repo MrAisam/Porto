@@ -27,13 +27,18 @@ window.addEventListener("scroll", () => {
 });
 
 
-document.querySelector('a[href="#about"]').addEventListener("click", (e) => {
-  e.preventDefault();
-  window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+document.querySelectorAll('a[href="#home"]').forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 });
-document.querySelector('a[href="#home"]').addEventListener("click", (e) => {
-  e.preventDefault();
-  window.scrollTo({ top: 0, behavior: "smooth" });
+
+document.querySelectorAll('a[href="#about"]').forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+  });
 });
 
 
