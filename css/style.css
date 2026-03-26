@@ -157,8 +157,9 @@ section {
 
 #character {
   image-rendering: pixelated;
-  width: 232px;  
-  height: 230px;
+  width: 250px;
+  height: 490px;
+  cursor: pointer;
 }
 
 .about-infoSide {
