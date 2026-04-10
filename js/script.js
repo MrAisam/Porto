@@ -152,3 +152,69 @@ const DRAW_H = FRAME_H;
     }
   });
 }
+
+// Info background
+const sceneBg = document.getElementById("sceneBg");
+if (sceneBg) {
+  const sctx = sceneBg.getContext("2d");
+  const bgSprite = new Image();
+  bgSprite.src = "assets/MoonSprite.png";
+
+  const BG_FRAMES = 2;
+  const BG_FRAME_W = 384;
+  const BG_FRAME_H = 216;
+
+  let bgFrame = 0;
+  let bgTick = 0;
+
+  function drawBg() {
+    const cw = sceneBg.offsetWidth;
+    const ch = sceneBg.offsetHeight;
+    sceneBg.width = cw;
+    sceneBg.height = ch;
+    sctx.imageSmoothingEnabled = false;
+
+    // 16:9 source fills any screen perfectly
+    const srcRatio = BG_FRAME_W / BG_FRAME_H;
+    const dstRatio = cw / ch;
+
+    let drawW, drawH, drawX, drawY;
+
+    if (dstRatio > srcRatio) {
+      // wider than 16:9 — fit to width
+      drawW = cw;
+      drawH = cw / srcRatio;
+      drawX = 0;
+      drawY = (ch - drawH) / 2;
+    } else {
+      // taller than 16:9 — fit to height
+      drawH = ch;
+      drawW = ch * srcRatio;
+      drawX = (cw - drawW) / 2;
+      drawY = 0;
+    }
+
+    sctx.fillStyle = '#0e0808';
+    sctx.fillRect(0, 0, cw, ch);
+
+    sctx.drawImage(
+      bgSprite,
+      bgFrame * BG_FRAME_W, 0,
+      BG_FRAME_W, BG_FRAME_H,
+      drawX, drawY,
+      drawW, drawH
+    );
+  }
+
+  function animateBg() {
+    bgTick++;
+    if (bgTick % 40 === 0) {
+      bgFrame = (bgFrame + 1) % BG_FRAMES;
+    }
+    drawBg();
+    requestAnimationFrame(animateBg);
+  }
+
+  bgSprite.onload = () => animateBg();
+  window.addEventListener("resize", drawBg);
+}
